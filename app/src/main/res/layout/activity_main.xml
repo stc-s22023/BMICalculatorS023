@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/bmi1"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/age"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etName"
+        app:layout_constraintEnd_toStartOf="@+id/etName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toTopOf="@+id/Height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/Height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/height"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etMail"
+        app:layout_constraintEnd_toStartOf="@+id/etMail"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etMail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toTopOf="@+id/Weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/etName"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="115dp" />
+
+    <Button
+        android:id="@+id/btCal"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="52dp"
+        android:text="@string/bt_cal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+    <Button
+        android:id="@+id/btClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/weight"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etMailTitle"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etMailTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toTopOf="@+id/btCal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/etMail"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/H"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/h"
+        app:layout_constraintBottom_toBottomOf="@+id/etMail"
+        app:layout_constraintStart_toEndOf="@+id/etMail" />
+
+    <TextView
+        android:id="@+id/W"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/w"
+        app:layout_constraintBottom_toBottomOf="@+id/etMailTitle"
+        app:layout_constraintStart_toEndOf="@+id/etMailTitle" />
+
+    <TextView
+        android:id="@+id/A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/a"
+        app:layout_constraintBottom_toBottomOf="@+id/etName"
+        app:layout_constraintStart_toEndOf="@+id/etName" />
+
+    <TextView
+        android:id="@+id/bmi2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi1" />
+
+    <TextView
+        android:id="@+id/bmi3"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi2" />
+
+    <TextView
+        android:id="@+id/bmi4"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi3" />
+
+    <TextView
+        android:id="@+id/bmi5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmi4"
+        app:layout_constraintStart_toEndOf="@+id/bmi4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
